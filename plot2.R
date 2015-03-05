@@ -8,7 +8,7 @@ createPlotTwo<-function(path2data, path2image, data = NULL){
     data<-getCleanData(path2data)
   }
   Sys.setlocale("LC_TIME", "English") 
-  png(file=path2image,width=480,height=480)
+  png(file=path2image,width=480,height=480,units="px",bg = "transparent")
   plot(data$Date, data$Global_active_power,type = "n", ylab = "Global Active Power (kilowatts)", xlab="")
   lines(data$Date, data$Global_active_power)
   dev.off()

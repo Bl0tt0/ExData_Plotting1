@@ -8,7 +8,7 @@ createPlotFour<-function(path2data, path2image, data = NULL){
     data<-getCleanData(path2data)
   }
   Sys.setlocale("LC_TIME", "English") 
-  png(file=path2image,width=480,height=480)
+  png(file=path2image,width=480,height=480,units="px",bg = "transparent")
   par(mfcol = c(2,2))
   with(data,{
     ## first plot

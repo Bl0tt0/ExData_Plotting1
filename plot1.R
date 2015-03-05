@@ -6,7 +6,7 @@ createPlotOne <- function(path2data, path2image, data = NULL){
   if(is.null(data)){
     data<-getCleanData(path2data)
   }
-  png(file=path2image,width=480,height=480)
+  png(file=path2image,width=480,height=480,units="px",bg = "transparent")
   hist(data$Global_active_power,xlab = "Global Active Power (kilowatts)", ylab="Frequency", main="Global Active Power", col="red")
   dev.off()
 }
